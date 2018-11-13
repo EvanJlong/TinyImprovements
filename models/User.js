@@ -7,7 +7,12 @@ var UserSchema = new Schema ({
         type: String,
         trim: true,
         required: "Name is Required"
-    }
+    },
+    password: {
+        type: String,
+        trim: true,
+        required: "Password is Required"
+      },
 })
 
 const User = mongoose.model("User", UserSchema);
