@@ -13,6 +13,12 @@ var UserSchema = new Schema ({
         trim: true,
         required: "Password is Required"
       },
+      kudos: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "Kudo"
+        }
+      ]
 })
 
 const User = mongoose.model("User", UserSchema);
